@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Pilot Logbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- PWA 설정 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00bfff">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>✈ Pilot Logbook</h1>
+
+    <div class="form-container">
+
+        <!-- 출발 공항 -->
+        <div class="input-group">
+            <label>Departure Airport</label>
+            <input type="text" id="departure" oninput="searchAirport('departure')" autocomplete="off">
+            <div class="results" id="departureResults"></div>
+        </div>
+
+        <!-- 도착 공항 -->
+        <div class="input-group">
+            <label>Arrival Airport</label>
+            <input type="text" id="arrival" oninput="searchAirport('arrival')" autocomplete="off">
+            <div class="results" id="arrivalResults"></div>
+        </div>
+
+        <!-- 출발 시간 -->
+        <div class="input-group">
+            <label>Departure Time</label>
+            <input type="datetime-local" id="departureTime">
+        </div>
+
+        <!-- 도착 시간 -->
+        <div class="input-group">
+            <label>Arrival Time</label>
+            <input type="datetime-local" id="arrivalTime">
+        </div>
+
+        <!-- 편명 -->
+        <div class="input-group">
+            <label>Flight Number</label>
+            <input type="text" id="flightNumber">
+        </div>
+
+        <!-- 항공기 등록번호 -->
+        <div class="input-group">
+            <label>Aircraft Registration</label>
